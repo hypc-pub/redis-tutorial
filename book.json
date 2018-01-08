@@ -1,0 +1,10 @@
+{
+    "title": "Redis Tutorial",
+    "author": "hypc",
+    "plugins": [
+        "theme-opendocs",
+        "-sharing",
+        "-fontsettings"
+    ],
+    "gitbook": ">=3.0.0"
+}
