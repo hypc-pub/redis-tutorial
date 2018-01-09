@@ -1,0 +1,11 @@
+version: "2"
+services:
+    master:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        image: redis-tutorial
+        container_name: redis-tutorial
+        ports:
+            - 4030:4000
+        restart: always
