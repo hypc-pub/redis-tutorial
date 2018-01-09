@@ -30,5 +30,6 @@ Session.vim
 # Auto-generated tag files
 tags
 
-# nvm
+# 自定义
 .nvmrc
+# images/redis.io-*.png*
