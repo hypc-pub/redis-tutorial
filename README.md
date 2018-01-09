@@ -10,7 +10,7 @@ Redis有三个主要特点，使它优越于其它键值数据存储系统：
 
 - Redis可以将数据复制到任意数量的从机中。
 
-[![https://redis.io/](images/redis.io-1024x768.png)](https://redis.io/)
+[![https://redis.io/](images/redis.io-1024x300.png)](https://redis.io/)
 
 ## Redis的优点
 
