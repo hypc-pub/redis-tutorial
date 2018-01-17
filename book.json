@@ -5,6 +5,7 @@
         "theme-opendocs",
         "include",
         "advanced-emoji",
+        "katex",
         "-sharing",
         "-fontsettings"
     ],
