@@ -3,6 +3,8 @@
     "author": "hypc",
     "plugins": [
         "theme-opendocs",
+        "include",
+        "advanced-emoji",
         "-sharing",
         "-fontsettings"
     ],

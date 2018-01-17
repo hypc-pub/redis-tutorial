@@ -1,0 +1,33 @@
+# Redis健命令
+
+Redis键命令用于管理Redis中的键。
+
+!INCLUDE "DEL.md"
+
+!INCLUDE "DUMP.md"
+
+!INCLUDE "EXISTS.md"
+
+!INCLUDE "EXPIRE.md"
+
+!INCLUDE "EXPIREAT.md"
+
+!INCLUDE "PEXPIRE.md"
+
+!INCLUDE "PEXPIREAT.md"
+
+!INCLUDE "KEYS.md"
+
+!INCLUDE "MOVE.md"
+
+!INCLUDE "PERSIST.md"
+
+!INCLUDE "PTTL.md"
+
+!INCLUDE "RANDOMKEY.md"
+
+!INCLUDE "RENAME.md"
+
+!INCLUDE "RENAMENX.md"
+
+!INCLUDE "TYPE.md"
