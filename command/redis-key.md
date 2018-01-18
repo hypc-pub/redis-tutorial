@@ -24,6 +24,8 @@ Redis键命令用于管理Redis中的键。
 
 !INCLUDE "PTTL.md"
 
+!INCLUDE "TTL.md"
+
 !INCLUDE "RANDOMKEY.md"
 
 !INCLUDE "RENAME.md"
