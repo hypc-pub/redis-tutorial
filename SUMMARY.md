@@ -13,6 +13,7 @@
 
 * [Redis健命令](command/redis-key.md)
 * [Redis字符串命令](command/redis-string.md)
+* [Redis连接命令](command/redis-connection.md)
 
 ## Redis高级应用
 
