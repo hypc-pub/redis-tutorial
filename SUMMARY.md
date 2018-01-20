@@ -13,3 +13,7 @@
 
 * [Redis健命令](command/redis-key.md)
 * [Redis字符串命令](command/redis-string.md)
+
+## Redis高级应用
+
+* [Redis数据备份与恢复](advance/redis-backup.md)
