@@ -17,3 +17,4 @@
 ## Redis高级应用
 
 * [Redis数据备份与恢复](advance/redis-backup.md)
+* [Redis安全](advance/redis-security.md)
