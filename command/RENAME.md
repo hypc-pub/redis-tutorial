@@ -4,7 +4,7 @@ Redis`RENAME`命令用于更改键的名称。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> RENAME OLD_KEY_NAME NEW_KEY_NAME
 ```
 
@@ -14,7 +14,7 @@ Redis`RENAME`命令用于更改键的名称。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey1 "redis"
 OK
 127.0.0.1:6379> SET mykey2 "mysql"

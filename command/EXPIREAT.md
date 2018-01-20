@@ -4,7 +4,7 @@ Redis`Expireat`命令用于以Unix时间戳格式设置键的到期时间。 在
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> EXPIREAT KEY_NAME TIME_IN_UNIX_TIMESTAMP
 ```
 
@@ -17,7 +17,7 @@ Redis`Expireat`命令用于以Unix时间戳格式设置键的到期时间。 在
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET my_key redis
 OK
 127.0.0.1:6379> EXPIREAT my_key 1516080509

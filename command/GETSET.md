@@ -4,7 +4,7 @@ Redis`Getset`命令用于设置指定key的值，并返回key的旧值。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> GETSET KEY_NAME VALUE
 ```
 
@@ -17,7 +17,7 @@ Redis`Getset`命令用于设置指定key的值，并返回key的旧值。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> GETSET mykey redis
 (nil)
 127.0.0.1:6379> GET mykey

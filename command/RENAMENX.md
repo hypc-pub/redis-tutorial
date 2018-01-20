@@ -4,7 +4,7 @@ Redis`RENAMENX`命令用于更改键的名称(如果新键不存在)。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> RENAMENX OLD_KEY_NAME NEW_KEY_NAME
 ```
 
@@ -17,7 +17,7 @@ Redis`RENAMENX`命令用于更改键的名称(如果新键不存在)。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey1 "redis"
 OK
 127.0.0.1:6379> SET mykey2 "mysql"

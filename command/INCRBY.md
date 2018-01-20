@@ -10,7 +10,7 @@ Redis`Incrby`命令将key中储存的数字加上指定的增量值。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> INCRBY KEY_NAME INCR_AMOUNT
 ```
 
@@ -20,7 +20,7 @@ Redis`Incrby`命令将key中储存的数字加上指定的增量值。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET rank 50
 OK
 127.0.0.1:6379> INCRBY rank 20

@@ -4,7 +4,7 @@ Redis`Msetnx`命令用于所有给定key都不存在时，同时设置一个或�
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> MSETNX key1 value1 key2 value2 .. keyN valueN
 ```
 
@@ -15,7 +15,7 @@ Redis`Msetnx`命令用于所有给定key都不存在时，同时设置一个或�
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> MSETNX rmdbs "MySQL" nosql "MongoDB" key-value-store "redis"
 (integer) 1
 127.0.0.1:6379> MGET rmdbs nosql key-value-store

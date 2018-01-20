@@ -4,7 +4,7 @@ Redis`Setrange`命令用指定的字符串覆盖给定key所储存的字符串�
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> SETRANGE KEY_NAME OFFSET VALUE
 ```
 
@@ -14,7 +14,7 @@ Redis`Setrange`命令用指定的字符串覆盖给定key所储存的字符串�
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET key1 "Hello World"
 OK
 127.0.0.1:6379> SETRANGE key1 6 "Redis"

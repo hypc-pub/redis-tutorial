@@ -4,7 +4,7 @@ Redis`DEL`命令用于删除Redis中现有/存在的键。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> DEL KEY_NAME
 ```
 
@@ -14,7 +14,7 @@ Redis`DEL`命令用于删除Redis中现有/存在的键。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET my_key "this is my key"
 OK
 127.0.0.1:6379> GET my_key

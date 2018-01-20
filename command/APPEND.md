@@ -8,7 +8,7 @@ Redis`Append`命令用于为指定的key追加值。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> APPEND KEY_NAME NEW_VALUE
 ```
 
@@ -18,7 +18,7 @@ Redis`Append`命令用于为指定的key追加值。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> EXISTS myphone
 (integer) 0
 127.0.0.1:6379> APPEND myphone "nokia"

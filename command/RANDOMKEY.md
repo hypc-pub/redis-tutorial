@@ -4,7 +4,7 @@ Redis`RANDOMKEY`命令用来获取Redis数据库的随机键。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> RANDOMKEY
 ```
 
@@ -14,7 +14,7 @@ Redis`RANDOMKEY`命令用来获取Redis数据库的随机键。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey1 "redis"
 OK
 127.0.0.1:6379> SET mykey2 "mysql"

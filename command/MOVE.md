@@ -4,7 +4,7 @@ Redis`MOVE`命令用于将键从当前选定的数据库移动到指定的目标
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> MOVE KEY_NAME DESTINATION_DATABASE
 ```
 
@@ -17,7 +17,7 @@ Redis`MOVE`命令用于将键从当前选定的数据库移动到指定的目标
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey "redis"
 OK
 127.0.0.1:6379> get mykey

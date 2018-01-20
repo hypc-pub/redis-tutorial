@@ -4,7 +4,7 @@ Redis`Pexpireat`命令用于以毫秒为单位指定unix时间戳来设置键的
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> PEXPIREAT KEY_NAME TIME_IN_MILLISECONDS_IN_UNIX_TIMESTAMP
 ```
 
@@ -17,7 +17,7 @@ Redis`Pexpireat`命令用于以毫秒为单位指定unix时间戳来设置键的
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET my_key redis
 OK
 127.0.0.1:6379> PEXPIREAT my_key 1516080509

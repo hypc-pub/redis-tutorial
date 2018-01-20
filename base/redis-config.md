@@ -6,14 +6,14 @@ Redis的配置文件位于Redis安装目录下，文件名为`redis.conf`。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> CONFIG GET CONFIG_SETTING_NAME
 127.0.0.1:6379> CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE
 ```
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> CONFIG GET databases
 1) "databases"
 2) "16"

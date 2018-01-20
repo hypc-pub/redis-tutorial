@@ -4,7 +4,7 @@ Redis命令行工具是`redis-cli`，它主要用来连接服务，有时也用�
 
 常用命令如下：
 
-```shell
+```bash
 $ # 连接本地服务器
 $ redis-cli
 $ # 连接远程服务
@@ -19,7 +19,7 @@ Could not connect to Redis at 10.0.0.2:6379: Connection refused
 
 `redis-cli`详细参数如下：
 
-```shell
+```bash
 $ redis-cli --help
 redis-cli 3.0.6
 

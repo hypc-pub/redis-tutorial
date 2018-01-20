@@ -6,7 +6,7 @@ Redis`Incrbyfloat`命令为key中所储存的值加上指定的浮点数增量�
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> INCRBYFLOAT KEY_NAME INCR_AMOUNT
 ```
 
@@ -16,7 +16,7 @@ Redis`Incrbyfloat`命令为key中所储存的值加上指定的浮点数增量�
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey 10.50
 OK
 127.0.0.1:6379> INCRBYFLOAT mykey 0.1

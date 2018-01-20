@@ -4,7 +4,7 @@ Redis`TTL`命令以秒为单位返回key的剩余过期时间。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> TTL KEY_NAME
 ```
 
@@ -18,7 +18,7 @@ Redis`TTL`命令以秒为单位返回key的剩余过期时间。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> FLUSHDB
 OK
 127.0.0.1:6379> TTL mykey

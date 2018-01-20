@@ -10,7 +10,7 @@ Redis`Decrby`命令将key所储存的值减去指定的减量值。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> DECRBY KEY_NAME DECREMENT_AMOUNT
 ```
 
@@ -20,7 +20,7 @@ Redis`Decrby`命令将key所储存的值减去指定的减量值。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET count 100
 OK
 127.0.0.1:6379> DECRBY count 20

@@ -10,7 +10,7 @@ Redis`Decr`命令将key中储存的数字值减一。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> DECR KEY_NAME
 ```
 
@@ -20,7 +20,7 @@ Redis`Decr`命令将key中储存的数字值减一。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET failure_times 10
 OK
 127.0.0.1:6379> DECR failure_times

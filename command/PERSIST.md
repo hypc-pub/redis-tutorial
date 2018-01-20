@@ -4,7 +4,7 @@ Redis`PERSIST`命令用于删除键所指定的过期时间。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> PERSIST KEY_NAME
 ```
 
@@ -17,7 +17,7 @@ Redis`PERSIST`命令用于删除键所指定的过期时间。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> EXPIRE mykey 60
 (integer) 1
 127.0.0.1:6379> TTL mykey

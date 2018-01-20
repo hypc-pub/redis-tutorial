@@ -4,7 +4,7 @@ Redis`SET`命令用于设置给定key的值。如果key已经存储其他值，S
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> SET KEY_NAME VALUE
 ```
 
@@ -14,7 +14,7 @@ Redis`SET`命令用于设置给定key的值。如果key已经存储其他值，S
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey redis
 OK
 127.0.0.1:6379> GET mykey

@@ -4,7 +4,7 @@ Redis`KEYS`命令用于搜索具有匹配模式的键。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> KEYS PATTERN
 ```
 
@@ -14,7 +14,7 @@ Redis`KEYS`命令用于搜索具有匹配模式的键。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey1 "redis"
 OK
 127.0.0.1:6379> SET mykey2 "mysql"

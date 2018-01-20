@@ -4,7 +4,7 @@ Redis`Getrange`命令用于获取存储在指定key中字符串的子字符串�
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> GETRANGE KEY_NAME start end
 ```
 
@@ -14,7 +14,7 @@ Redis`Getrange`命令用于获取存储在指定key中字符串的子字符串�
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey "This is my test key"
 OK
 127.0.0.1:6379> GETRANGE mykey 0 3

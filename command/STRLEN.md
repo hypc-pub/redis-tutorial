@@ -4,7 +4,7 @@ Redis`Strlen`命令用于获取指定key所储存的字符串值的长度。当k
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> STRLEN KEY_NAME
 ```
 
@@ -14,7 +14,7 @@ Redis`Strlen`命令用于获取指定key所储存的字符串值的长度。当k
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey "Hello world"
 OK
 127.0.0.1:6379> STRLEN mykey

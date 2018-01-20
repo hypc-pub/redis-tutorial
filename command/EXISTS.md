@@ -4,7 +4,7 @@ Redis`EXISTS`命令用于检查键是否存在于Redis中。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> EXISTS KEY_NAME
 ```
 
@@ -17,7 +17,7 @@ Redis`EXISTS`命令用于检查键是否存在于Redis中。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> EXISTS my_key
 (integer) 0
 127.0.0.1:6379> SET my_key "redis"

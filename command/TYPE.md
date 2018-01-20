@@ -4,7 +4,7 @@ Redis`TYPE`命令用于获取存储在键中的值的数据类型。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> TYPE KEY_NAME
 ```
 
@@ -14,7 +14,7 @@ Redis`TYPE`命令用于获取存储在键中的值的数据类型。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET mykey "redis"
 OK
 127.0.0.1:6379> TYPE mykey

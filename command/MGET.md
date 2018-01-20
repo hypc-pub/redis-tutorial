@@ -4,7 +4,7 @@ Redis`Mget`命令返回所有(一个或多个)给定key的值。 如果给定的
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> MGET KEY1 KEY2 .. KEYN
 ```
 
@@ -14,7 +14,7 @@ Redis`Mget`命令返回所有(一个或多个)给定key的值。 如果给定的
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET key1 "hello"
 OK
 127.0.0.1:6379> SET key2 "world"

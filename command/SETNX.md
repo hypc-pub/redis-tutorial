@@ -4,7 +4,7 @@ Redis`Setnx`（`SET if Not eXists`）命令在指定的key不存在时，为key�
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> SETNX KEY_NAME VALUE
 ```
 
@@ -15,7 +15,7 @@ Redis`Setnx`（`SET if Not eXists`）命令在指定的key不存在时，为key�
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> EXISTS job
 (integer) 0
 127.0.0.1:6379> SETNX job "programmer"

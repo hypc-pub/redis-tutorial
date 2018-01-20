@@ -10,7 +10,7 @@ Redis`Incr`命令将key中储存的数字值增一。
 
 **语法**
 
-```shell
+```bash
 127.0.0.1:6379> INCR KEY_NAME
 ```
 
@@ -20,7 +20,7 @@ Redis`Incr`命令将key中储存的数字值增一。
 
 **示例**
 
-```shell
+```bash
 127.0.0.1:6379> SET i 20
 OK
 127.0.0.1:6379> INCR i
