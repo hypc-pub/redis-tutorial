@@ -9,7 +9,7 @@
 * [Redis GUI工具](base/redis-gui.md)
 * [Redis数据类型](base/redis-data-types.md)
 
-## 附录
+## Redis命令
 
-* [Redis命令](command/README.md)
-    - [Redis健命令](command/redis-key.md)
+* [Redis健命令](command/redis-key.md)
+* [Redis字符串命令](command/redis-string.md)

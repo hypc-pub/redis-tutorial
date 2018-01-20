@@ -2,10 +2,11 @@
     "title": "Redis Tutorial",
     "author": "hypc",
     "plugins": [
-        "theme-opendocs",
+        "theme-opendocs", "advanced-emoji",
         "include",
-        "advanced-emoji",
         "katex",
+        "-highlight", "prism",
+        "-lunr", "-search", "search-pro",
         "-sharing",
         "-fontsettings"
     ],
