@@ -16,6 +16,7 @@
 * [Redis哈希命令](command/redis-hash.md)
 * [Redis列表命令](command/redis-list.md)
 * [Redis集合命令](command/redis-set.md)
+* [Redis有序集合命令](command/redis-sorted-set.md)
 * [Redis发布订阅命令](command/redis-pub-sub.md)
 * [Redis事务命令](command/redis-transaction.md)
 * [Redis连接命令](command/redis-connection.md)
