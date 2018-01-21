@@ -14,6 +14,7 @@
 * [Redis健命令](command/redis-key.md)
 * [Redis字符串命令](command/redis-string.md)
 * [Redis哈希命令](command/redis-hash.md)
+* [Redis列表命令](command/redis-list.md)
 * [Redis连接命令](command/redis-connection.md)
 
 ## Redis高级应用
