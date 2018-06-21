@@ -1,0 +1,618 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redis事务命令 · Redis Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="redis-connection.html" />
+    
+    
+    <link rel="prev" href="redis-pub-sub.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Redis Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="redis-connection.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="redis-pub-sub.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis入门</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-config.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis配置
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-cli.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis命令行工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-gui.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis GUI工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-data-types.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据类型
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis命令</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="redis-key.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis健命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-string.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis字符串命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-hash.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis哈希命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-list.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis列表命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-sorted-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis有序集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-pub-sub.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis发布订阅命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-transaction.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Redis事务命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-connection.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis连接命令
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis高级应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../advance/redis-backup.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据备份与恢复
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../advance/redis-security.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安全
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="redis&#x4E8B;&#x52A1;&#x547D;&#x4EE4;">Redis&#x4E8B;&#x52A1;&#x547D;&#x4EE4;</h1>
+<p>Redis&#x4E8B;&#x52A1;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x4E14;&#x5E26;&#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4FDD;&#x8BC1;&#xFF1A;</p>
+<ul>
+<li>&#x6279;&#x91CF;&#x64CD;&#x4F5C;&#x5728;&#x53D1;&#x9001;<code>EXEC</code>&#x547D;&#x4EE4;&#x524D;&#x88AB;&#x653E;&#x5165;&#x961F;&#x5217;&#x7F13;&#x5B58;&#x3002;</li>
+<li>&#x6536;&#x5230;<code>EXEC</code>&#x547D;&#x4EE4;&#x540E;&#x8FDB;&#x5165;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#xFF0C;&#x4E8B;&#x52A1;&#x4E2D;&#x4EFB;&#x610F;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x547D;&#x4EE4;&#x4F9D;&#x7136;&#x88AB;&#x6267;&#x884C;&#x3002;</li>
+<li>&#x5728;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF0C;&#x5176;&#x4ED6;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x7684;&#x547D;&#x4EE4;&#x8BF7;&#x6C42;&#x4E0D;&#x4F1A;&#x63D2;&#x5165;&#x5230;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x5E8F;&#x5217;&#x4E2D;&#x3002;</li>
+</ul>
+<p>&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4ECE;&#x5F00;&#x59CB;&#x5230;&#x6267;&#x884C;&#x4F1A;&#x7ECF;&#x5386;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;</p>
+<ul>
+<li>&#x5F00;&#x59CB;&#x4E8B;&#x52A1;&#x3002;</li>
+<li>&#x547D;&#x4EE4;&#x5165;&#x961F;&#x3002;</li>
+<li>&#x6267;&#x884C;&#x4E8B;&#x52A1;&#x3002;</li>
+</ul>
+<h2 id="redis-discard&#x547D;&#x4EE4;">Redis Discard&#x547D;&#x4EE4;</h2>
+<p>Redis <code>Discard</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x53D6;&#x6D88;&#x4E8B;&#x52A1;&#xFF0C;&#x653E;&#x5F03;&#x6267;&#x884C;&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x7684;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> DISCARD
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> PING
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> SET greeting <span class="token string">&quot;hello&quot;</span>
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> DISCARD
+OK
+</code></pre>
+<h2 id="redis-exec&#x547D;&#x4EE4;">Redis Exec&#x547D;&#x4EE4;</h2>
+<p>Redis <code>Exec</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x6240;&#x6709;&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x7684;&#x547D;&#x4EE4;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6309;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x3002;&#x5F53;&#x64CD;&#x4F5C;&#x88AB;&#x6253;&#x65AD;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x503C;<code>nil</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x4E8B;&#x52A1;&#x88AB;&#x6210;&#x529F;&#x6267;&#x884C;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> PING
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+1<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+2<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
+3<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
+4<span class="token punctuation">)</span> PONG
+
+<span class="token comment" spellcheck="true"># &#x76D1;&#x89C6; key &#xFF0C;&#x4E14;&#x4E8B;&#x52A1;&#x6210;&#x529F;&#x6267;&#x884C;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> SET lock <span class="token string">&quot;huangz&quot;</span>
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR lock_times
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+1<span class="token punctuation">)</span> OK
+2<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+
+<span class="token comment" spellcheck="true"># &#x76D1;&#x89C6; key &#xFF0C;&#x4E14;&#x4E8B;&#x52A1;&#x88AB;&#x6253;&#x65AD;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> SET lock <span class="token string">&quot;joe&quot;</span>
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR lock_times
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+<span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="redis-multi&#x547D;&#x4EE4;">Redis Multi&#x547D;&#x4EE4;</h2>
+<p>Redis <code>Multi</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x5757;&#x7684;&#x5F00;&#x59CB;&#x3002;</p>
+<p>&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x7684;&#x591A;&#x6761;&#x547D;&#x4EE4;&#x4F1A;&#x6309;&#x7167;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x88AB;&#x653E;&#x8FDB;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5F53;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x7531;<code>EXEC</code>&#x547D;&#x4EE4;&#x539F;&#x5B50;&#x6027;(atomic)&#x5730;&#x6267;&#x884C;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> PING
+QUEUED
+127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+1<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+2<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
+3<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
+4<span class="token punctuation">)</span> PONG
+</code></pre>
+<h2 id="redis-unwatch&#x547D;&#x4EE4;">Redis Unwatch&#x547D;&#x4EE4;</h2>
+<p>Redis <code>Unwatch</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x53D6;&#x6D88;<code>WATCH</code>&#x547D;&#x4EE4;&#x5BF9;&#x6240;&#x6709;key&#x7684;&#x76D1;&#x89C6;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> UNWATCH
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> UNWATCH
+OK
+</code></pre>
+<h2 id="redis-watch&#x547D;&#x4EE4;">Redis Watch&#x547D;&#x4EE4;</h2>
+<p>Redis <code>Watch</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x4E00;&#x4E2A;(&#x6216;&#x591A;&#x4E2A;)key&#xFF0C;&#x5982;&#x679C;&#x5728;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x8FD9;&#x4E2A;(&#x6216;&#x8FD9;&#x4E9B;)key&#x88AB;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x6240;&#x6539;&#x52A8;&#xFF0C;&#x90A3;&#x4E48;&#x4E8B;&#x52A1;&#x5C06;&#x88AB;&#x6253;&#x65AD;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> WATCH key <span class="token punctuation">[</span>key <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+OK
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Redis事务命令","level":"2.8","depth":1,"next":{"title":"Redis连接命令","level":"2.9","depth":1,"path":"command/redis-connection.md","ref":"command/redis-connection.md","articles":[]},"previous":{"title":"Redis发布订阅命令","level":"2.7","depth":1,"path":"command/redis-pub-sub.md","ref":"command/redis-pub-sub.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"command/redis-transaction.md","mtime":"2018-06-21T11:32:38.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:33:58.929Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

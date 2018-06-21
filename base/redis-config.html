@@ -1,0 +1,507 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redis配置 · Redis Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="redis-cli.html" />
+    
+    
+    <link rel="prev" href="redis-install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Redis Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="redis-cli.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="redis-install.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis入门</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-config.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Redis配置
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-cli.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis命令行工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-gui.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis GUI工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-data-types.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据类型
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis命令</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../command/redis-key.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis健命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-string.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis字符串命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-hash.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis哈希命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-list.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis列表命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-sorted-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis有序集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-pub-sub.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis发布订阅命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-transaction.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis事务命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-connection.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis连接命令
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis高级应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../advance/redis-backup.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据备份与恢复
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../advance/redis-security.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安全
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="redis&#x914D;&#x7F6E;">Redis&#x914D;&#x7F6E;</h1>
+<p>Redis&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E;Redis&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x4E3A;<code>redis.conf</code>&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>CONFIG</code>&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x6216;&#x8BBE;&#x7F6E;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> CONFIG GET CONFIG_SETTING_NAME
+127.0.0.1:6379<span class="token operator">&gt;</span> CONFIG SET CONFIG_SETTING_NAME NEW_CONFIG_VALUE
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> CONFIG GET databases
+1<span class="token punctuation">)</span> <span class="token string">&quot;databases&quot;</span>
+2<span class="token punctuation">)</span> <span class="token string">&quot;16&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> CONFIG GET port
+1<span class="token punctuation">)</span> <span class="token string">&quot;port&quot;</span>
+2<span class="token punctuation">)</span> <span class="token string">&quot;6379&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> CONFIG SET loglevel <span class="token string">&quot;notice&quot;</span>
+OK
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Redis配置","level":"1.3","depth":1,"next":{"title":"Redis命令行工具","level":"1.4","depth":1,"path":"base/redis-cli.md","ref":"base/redis-cli.md","articles":[]},"previous":{"title":"Redis安装","level":"1.2","depth":1,"path":"base/redis-install.md","ref":"base/redis-install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/redis-config.md","mtime":"2018-06-21T11:32:38.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:33:58.929Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

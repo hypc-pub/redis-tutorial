@@ -1,0 +1,872 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redis字符串命令 · Redis Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="redis-hash.html" />
+    
+    
+    <link rel="prev" href="redis-key.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Redis Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="redis-hash.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="redis-key.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis入门</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-config.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis配置
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-cli.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis命令行工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-gui.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis GUI工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../base/redis-data-types.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据类型
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis命令</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="redis-key.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis健命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-string.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Redis字符串命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-hash.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis哈希命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-list.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis列表命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-sorted-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis有序集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-pub-sub.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis发布订阅命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-transaction.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis事务命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-connection.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis连接命令
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis高级应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../advance/redis-backup.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据备份与恢复
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../advance/redis-security.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安全
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="redis&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;">Redis&#x5B57;&#x7B26;&#x4E32;&#x547D;&#x4EE4;</h1>
+<p>Redis&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x76F8;&#x5173;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x7BA1;&#x7406;redis&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x3002;</p>
+<h2 id="redis-set&#x547D;&#x4EE4;">Redis SET&#x547D;&#x4EE4;</h2>
+<p>Redis<code>SET</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x7ED9;&#x5B9A;key&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;key&#x5DF2;&#x7ECF;&#x5B58;&#x50A8;&#x5176;&#x4ED6;&#x503C;&#xFF0C;SET&#x5C31;&#x8986;&#x5199;&#x65E7;&#x503C;&#xFF0C;&#x4E14;&#x65E0;&#x89C6;&#x7C7B;&#x578B;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET KEY_NAME VALUE
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x5728;&#x8BBE;&#x7F6E;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey redis
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;redis&quot;</span>
+</code></pre>
+<h2 id="redis-get&#x547D;&#x4EE4;">Redis GET&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Get</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6307;&#x5B9A;key&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE;<code>nil</code>&#x3002;&#x5982;&#x679C;key&#x50A8;&#x5B58;&#x7684;&#x503C;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> GET KEY_NAME
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<ul>
+<li>&#x8FD4;&#x56DE;key&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>nil</code></li>
+<li>&#x5982;&#x679C;key&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;</li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey redis
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;redis&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH db redis mongodb mysql
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
+127.0.0.1:6379<span class="token operator">&gt;</span> GET db
+<span class="token punctuation">(</span>error<span class="token punctuation">)</span> ERR Operation against a key holding the wrong kind of value
+</code></pre>
+<h2 id="redis-getrange&#x547D;&#x4EE4;">Redis Getrange&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Getrange</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x6307;&#x5B9A;key&#x4E2D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x622A;&#x53D6;&#x8303;&#x56F4;&#x7531;<code>start</code>&#x548C;<code>end</code>&#x4E24;&#x4E2A;&#x504F;&#x79FB;&#x91CF;&#x51B3;&#x5B9A;(&#x5305;&#x62EC;<code>start</code>&#x548C;<code>end</code>&#x5728;&#x5185;)&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> GETRANGE KEY_NAME start end
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x622A;&#x53D6;&#x5F97;&#x5230;&#x7684;&#x5B50;&#x5B57;&#x7B26;&#x4E32;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey <span class="token string">&quot;This is my test key&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> GETRANGE mykey 0 3
+<span class="token string">&quot;This&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> GETRANGE mykey 0 -1
+<span class="token string">&quot;This is my test key&quot;</span>
+</code></pre>
+<h2 id="redis-getset&#x547D;&#x4EE4;">Redis Getset&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Getset</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;key&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;key&#x7684;&#x65E7;&#x503C;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> GETSET KEY_NAME VALUE
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;key&#x7684;&#x65E7;&#x503C;</p>
+<ul>
+<li>&#x5F53;key&#x6CA1;&#x6709;&#x65E7;&#x503C;&#x65F6;&#xFF0C;&#x5373;key&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>nil</code></li>
+<li>&#x5F53;key&#x5B58;&#x5728;&#x4F46;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;</li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> GETSET mykey redis
+<span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;redis&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> GETSET mykey redis2
+<span class="token string">&quot;redis&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;redis2&quot;</span>
+</code></pre>
+<h2 id="redis-getbit&#x547D;&#x4EE4;">Redis Getbit&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Getbit</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5BF9;key&#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#xFF0C;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x504F;&#x79FB;&#x91CF;&#x4E0A;&#x7684;&#x4F4D;(bit)&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> GETBIT KEY_NAME OFFSET
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x6307;&#x5B9A;&#x504F;&#x79FB;&#x91CF;&#x4E0A;&#x7684;&#x4F4D;(bit)&#x3002;</p>
+<p>&#x5F53;&#x504F;&#x79FB;&#x91CF;<code>OFFSET</code>&#x6BD4;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x7684;&#x957F;&#x5EA6;&#x5927;&#xFF0C;&#x6216;&#x8005;key&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>0</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS bit
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> GETBIT bit 100
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> SETBIT bit 100 1
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> GETBIT bit 100
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+</code></pre>
+<h2 id="redis-mget&#x547D;&#x4EE4;">Redis Mget&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Mget</code>&#x547D;&#x4EE4;&#x8FD4;&#x56DE;&#x6240;&#x6709;(&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;)&#x7ED9;&#x5B9A;key&#x7684;&#x503C;&#x3002; &#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;key&#x91CC;&#x9762;&#xFF0C;&#x6709;&#x67D0;&#x4E2A;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;key&#x8FD4;&#x56DE;&#x7279;&#x6B8A;&#x503C;<code>nil</code>&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MGET KEY1 KEY2 <span class="token punctuation">..</span> KEYN
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6240;&#x6709;&#x7ED9;&#x5B9A;key&#x7684;&#x503C;&#x7684;&#x5217;&#x8868;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET key1 <span class="token string">&quot;hello&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> SET key2 <span class="token string">&quot;world&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> MGET key1 key2 key3
+1<span class="token punctuation">)</span> <span class="token string">&quot;Hello&quot;</span>
+2<span class="token punctuation">)</span> <span class="token string">&quot;World&quot;</span>
+3<span class="token punctuation">)</span> <span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="redis-setbit&#x547D;&#x4EE4;">Redis Setbit&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Setbit</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5BF9;key&#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#xFF0C;&#x8BBE;&#x7F6E;&#x6216;&#x6E05;&#x9664;&#x6307;&#x5B9A;&#x504F;&#x79FB;&#x91CF;&#x4E0A;&#x7684;&#x4F4D;(bit)&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SETBIT KEY_NAME OFFSET
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x6307;&#x5B9A;&#x504F;&#x79FB;&#x91CF;&#x539F;&#x6765;&#x50A8;&#x5B58;&#x7684;&#x4F4D;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SETBIT bit 100 1
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> GETBIT bit 100
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+127.0.0.1:6379<span class="token operator">&gt;</span> GETBIT bit 10
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+</code></pre>
+<h2 id="redis-setex&#x547D;&#x4EE4;">Redis Setex&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Setex</code>&#x547D;&#x4EE4;&#x4E3A;&#x6307;&#x5B9A;&#x7684;key&#x8BBE;&#x7F6E;&#x503C;&#x53CA;&#x5176;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;key&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;SETEX&#x547D;&#x4EE4;&#x5C06;&#x4F1A;&#x66FF;&#x6362;&#x65E7;&#x7684;&#x503C;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SETEX KEY_NAME TIMEOUT VALUE
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SETEX mykey 60 redis
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> TTL mykey
+59
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;redis&quot;</span>
+</code></pre>
+<h2 id="redis-setnx&#x547D;&#x4EE4;">Redis Setnx&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Setnx</code>&#xFF08;<code>SET if Not eXists</code>&#xFF09;&#x547D;&#x4EE4;&#x5728;&#x6307;&#x5B9A;&#x7684;key&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x4E3A;key&#x8BBE;&#x7F6E;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SETNX KEY_NAME VALUE
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;<code>1</code></li>
+<li>&#x8BBE;&#x7F6E;&#x5931;&#x8D25;&#xFF0C;&#x8FD4;&#x56DE;<code>0</code></li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS job
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> SETNX job <span class="token string">&quot;programmer&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+127.0.0.1:6379<span class="token operator">&gt;</span> SETNX job <span class="token string">&quot;code-farmer&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> GET job
+<span class="token string">&quot;programmer&quot;</span>
+</code></pre>
+<h2 id="redis-setrange&#x547D;&#x4EE4;">Redis Setrange&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Setrange</code>&#x547D;&#x4EE4;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8986;&#x76D6;&#x7ED9;&#x5B9A;key&#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#xFF0C;&#x8986;&#x76D6;&#x7684;&#x4F4D;&#x7F6E;&#x4ECE;&#x504F;&#x79FB;&#x91CF;<code>OFFSET</code>&#x5F00;&#x59CB;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SETRANGE KEY_NAME OFFSET VALUE
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x88AB;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET key1 <span class="token string">&quot;Hello World&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> SETRANGE key1 6 <span class="token string">&quot;Redis&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 11
+127.0.0.1:6379<span class="token operator">&gt;</span> GET key1
+<span class="token string">&quot;Hello Redis&quot;</span>
+</code></pre>
+<h2 id="redis-strlen&#x547D;&#x4EE4;">Redis Strlen&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Strlen</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6307;&#x5B9A;key&#x6240;&#x50A8;&#x5B58;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5F53;key&#x50A8;&#x5B58;&#x7684;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> STRLEN KEY_NAME
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x7684;&#x957F;&#x5EA6;&#x3002; &#x5F53; key &#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE; 0</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey <span class="token string">&quot;Hello world&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> STRLEN mykey
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 11
+127.0.0.1:6379<span class="token operator">&gt;</span> STRLEN nonexisting
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+</code></pre>
+<h2 id="redis-mset&#x547D;&#x4EE4;">Redis Mset&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Mset</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;key-value&#x5BF9;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MSET key1 value1 key2 value2 <span class="token punctuation">..</span> keyN valueN
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MSET key1 <span class="token string">&quot;Hello&quot;</span> key2 <span class="token string">&quot;World&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> GET key1
+<span class="token string">&quot;Hello&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> GET key2
+<span class="token string">&quot;World&quot;</span>
+</code></pre>
+<h2 id="redis-msetnx&#x547D;&#x4EE4;">Redis Msetnx&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Msetnx</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7ED9;&#x5B9A;key&#x90FD;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;key-value&#x5BF9;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MSETNX key1 value1 key2 value2 <span class="token punctuation">..</span> keyN valueN
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<ul>
+<li>&#x5F53;&#x6240;&#x6709;key&#x90FD;&#x6210;&#x529F;&#x8BBE;&#x7F6E;&#xFF0C;&#x8FD4;&#x56DE;<code>1</code></li>
+<li>&#x5982;&#x679C;&#x6240;&#x6709;&#x7ED9;&#x5B9A;key&#x90FD;&#x8BBE;&#x7F6E;&#x5931;&#x8D25;(&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A; key &#x5DF2;&#x7ECF;&#x5B58;&#x5728;)&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;<code>0</code></li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MSETNX rmdbs <span class="token string">&quot;MySQL&quot;</span> nosql <span class="token string">&quot;MongoDB&quot;</span> key-value-store <span class="token string">&quot;redis&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+127.0.0.1:6379<span class="token operator">&gt;</span> MGET rmdbs nosql key-value-store
+1<span class="token punctuation">)</span> <span class="token string">&quot;MySQL&quot;</span>
+2<span class="token punctuation">)</span> <span class="token string">&quot;MongoDB&quot;</span>
+3<span class="token punctuation">)</span> <span class="token string">&quot;redis&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> MSETNX rmdbs <span class="token string">&quot;Sqlite&quot;</span> language <span class="token string">&quot;python&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS language
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> GET rmdbs
+<span class="token string">&quot;MySQL&quot;</span>
+</code></pre>
+<h2 id="redis-psetex&#x547D;&#x4EE4;">Redis Psetex&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Psetex</code>&#x547D;&#x4EE4;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x8BBE;&#x7F6E;key&#x7684;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> PSETEX key1 EXPIRY_IN_MILLISECONDS value1
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;<code>OK</code></p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> PSETEX mykey 1000 <span class="token string">&quot;Hello&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> PTTL mykey
+999
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;Hello&quot;</span>
+</code></pre>
+<h2 id="redis-incr&#x547D;&#x4EE4;">Redis Incr&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Incr</code>&#x547D;&#x4EE4;&#x5C06;key&#x4E2D;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x5B57;&#x503C;&#x589E;&#x4E00;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;key&#x7684;&#x503C;&#x4F1A;&#x5148;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;<code>0</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;INCR&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x503C;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x672C;&#x64CD;&#x4F5C;&#x7684;&#x503C;&#x9650;&#x5236;&#x5728;64&#x4F4D;(bit)&#x6709;&#x7B26;&#x53F7;&#x6570;&#x5B57;&#x8868;&#x793A;&#x4E4B;&#x5185;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> INCR KEY_NAME
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x6267;&#x884C; INCR &#x547D;&#x4EE4;&#x4E4B;&#x540E; key &#x7684;&#x503C;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET i 20
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCR i
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 21
+127.0.0.1:6379<span class="token operator">&gt;</span> GET i
+<span class="token string">&quot;21&quot;</span>
+</code></pre>
+<h2 id="redis-incrby&#x547D;&#x4EE4;">Redis Incrby&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Incrby</code>&#x547D;&#x4EE4;&#x5C06;key&#x4E2D;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x5B57;&#x52A0;&#x4E0A;&#x6307;&#x5B9A;&#x7684;&#x589E;&#x91CF;&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;key&#x7684;&#x503C;&#x4F1A;&#x5148;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;<code>0</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;<code>INCRBY</code>&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x503C;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x672C;&#x64CD;&#x4F5C;&#x7684;&#x503C;&#x9650;&#x5236;&#x5728;64&#x4F4D;(bit)&#x6709;&#x7B26;&#x53F7;&#x6570;&#x5B57;&#x8868;&#x793A;&#x4E4B;&#x5185;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> INCRBY KEY_NAME INCR_AMOUNT
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x52A0;&#x4E0A;&#x6307;&#x5B9A;&#x7684;&#x589E;&#x91CF;&#x503C;&#x4E4B;&#x540E;&#xFF0C;key&#x7684;&#x503C;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET rank 50
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBY rank 20
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 70
+127.0.0.1:6379<span class="token operator">&gt;</span> GET rank
+<span class="token string">&quot;70&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS counter
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBY counter 30
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 30
+127.0.0.1:6379<span class="token operator">&gt;</span> GET counter
+<span class="token string">&quot;30&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> SET book <span class="token string">&quot;long long ago...&quot;</span>
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBY book 200
+<span class="token punctuation">(</span>error<span class="token punctuation">)</span> ERR value is not an integer or out of range
+</code></pre>
+<h2 id="redis-incrbyfloat&#x547D;&#x4EE4;">Redis Incrbyfloat&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Incrbyfloat</code>&#x547D;&#x4EE4;&#x4E3A;key&#x4E2D;&#x6240;&#x50A8;&#x5B58;&#x7684;&#x503C;&#x52A0;&#x4E0A;&#x6307;&#x5B9A;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x589E;&#x91CF;&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;<code>INCRBYFLOAT</code>&#x4F1A;&#x5148;&#x5C06;key&#x7684;&#x503C;&#x8BBE;&#x4E3A;<code>0</code>&#xFF0C;&#x518D;&#x6267;&#x884C;&#x52A0;&#x6CD5;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> INCRBYFLOAT KEY_NAME INCR_AMOUNT
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#x4E4B;&#x540E;key&#x7684;&#x503C;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey 10.50
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBYFLOAT mykey 0.1
+<span class="token string">&quot;10.6&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey 314e-2
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;314e-2&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBYFLOAT mykey 0
+<span class="token string">&quot;3.14&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey 3
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBYFLOAT mykey 1.1
+<span class="token string">&quot;4.1&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> SET mykey 3.0
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;3.0&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> INCRBYFLOAT mykey 1.000000000000000000000
+<span class="token string">&quot;4&quot;</span>
+127.0.0.1:6379<span class="token operator">&gt;</span> GET mykey
+<span class="token string">&quot;4&quot;</span>
+</code></pre>
+<h2 id="redis-decr&#x547D;&#x4EE4;">Redis Decr&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Decr</code>&#x547D;&#x4EE4;&#x5C06;key&#x4E2D;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x5B57;&#x503C;&#x51CF;&#x4E00;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;key&#x7684;&#x503C;&#x4F1A;&#x5148;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;<code>0</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;<code>DECR</code>&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x503C;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x672C;&#x64CD;&#x4F5C;&#x7684;&#x503C;&#x9650;&#x5236;&#x5728;64&#x4F4D;(bit)&#x6709;&#x7B26;&#x53F7;&#x6570;&#x5B57;&#x8868;&#x793A;&#x4E4B;&#x5185;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> DECR KEY_NAME
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#x4E4B;&#x540E;key&#x7684;&#x503C;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET failure_times 10
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> DECR failure_times
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 9
+127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS count
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> DECR count
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> -1
+127.0.0.1:6379<span class="token operator">&gt;</span> SET company YOUR_CODE_SUCKS.LLC
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> DECR company
+<span class="token punctuation">(</span>error<span class="token punctuation">)</span> ERR value is not an integer or out of range
+</code></pre>
+<h2 id="redis-decrby&#x547D;&#x4EE4;">Redis Decrby&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Decrby</code>&#x547D;&#x4EE4;&#x5C06;key&#x6240;&#x50A8;&#x5B58;&#x7684;&#x503C;&#x51CF;&#x53BB;&#x6307;&#x5B9A;&#x7684;&#x51CF;&#x91CF;&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;key&#x7684;&#x503C;&#x4F1A;&#x5148;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;<code>0</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;<code>DECRBY</code>&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x503C;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x672C;&#x64CD;&#x4F5C;&#x7684;&#x503C;&#x9650;&#x5236;&#x5728;64&#x4F4D;(bit)&#x6709;&#x7B26;&#x53F7;&#x6570;&#x5B57;&#x8868;&#x793A;&#x4E4B;&#x5185;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> DECRBY KEY_NAME DECREMENT_AMOUNT
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x51CF;&#x53BB;&#x6307;&#x5B9A;&#x51CF;&#x91CF;&#x503C;&#x4E4B;&#x540E;&#xFF0C;key&#x7684;&#x503C;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> SET count 100
+OK
+127.0.0.1:6379<span class="token operator">&gt;</span> DECRBY count 20
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 80
+127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS pages
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> DECRBY pages 10
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> -10
+</code></pre>
+<h2 id="redis-append&#x547D;&#x4EE4;">Redis Append&#x547D;&#x4EE4;</h2>
+<p>Redis<code>Append</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x4E3A;&#x6307;&#x5B9A;&#x7684;key&#x8FFD;&#x52A0;&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;<code>APPEND</code>&#x547D;&#x4EE4;&#x5C06;value&#x8FFD;&#x52A0;&#x5230;key&#x539F;&#x6765;&#x7684;&#x503C;&#x7684;&#x672B;&#x5C3E;&#x3002;</p>
+<p>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;<code>APPEND</code>&#x5C31;&#x7B80;&#x5355;&#x5730;&#x5C06;&#x7ED9;&#x5B9A;key&#x8BBE;&#x4E3A;value&#xFF0C;&#x5C31;&#x50CF;&#x6267;&#x884C;<code>SET key value</code>&#x4E00;&#x6837;&#x3002;</p>
+<p><strong>&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> APPEND KEY_NAME NEW_VALUE
+</code></pre>
+<p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x8FFD;&#x52A0;&#x6307;&#x5B9A;&#x503C;&#x4E4B;&#x540E;&#xFF0C;key&#x4E2D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> EXISTS myphone
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
+127.0.0.1:6379<span class="token operator">&gt;</span> APPEND myphone <span class="token string">&quot;nokia&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 5
+127.0.0.1:6379<span class="token operator">&gt;</span> APPEND myphone <span class="token string">&quot; - 1110&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 12
+127.0.0.1:6379<span class="token operator">&gt;</span> GET myphone
+<span class="token string">&quot;nokia - 1110&quot;</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Redis字符串命令","level":"2.2","depth":1,"next":{"title":"Redis哈希命令","level":"2.3","depth":1,"path":"command/redis-hash.md","ref":"command/redis-hash.md","articles":[]},"previous":{"title":"Redis健命令","level":"2.1","depth":1,"path":"command/redis-key.md","ref":"command/redis-key.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"command/redis-string.md","mtime":"2018-06-21T11:32:38.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:33:58.929Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

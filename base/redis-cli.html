@@ -1,0 +1,558 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redis命令行工具 · Redis Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="redis-gui.html" />
+    
+    
+    <link rel="prev" href="redis-config.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Redis Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="redis-gui.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="redis-config.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis入门</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安装
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-config.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis配置
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-cli.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Redis命令行工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-gui.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis GUI工具
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="redis-data-types.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据类型
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis命令</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../command/redis-key.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis健命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-string.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis字符串命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-hash.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis哈希命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-list.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis列表命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-sorted-set.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis有序集合命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-pub-sub.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis发布订阅命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-transaction.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis事务命令
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../command/redis-connection.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis连接命令
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">Redis高级应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../advance/redis-backup.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis数据备份与恢复
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../advance/redis-security.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Redis安全
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="redis&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;">Redis&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</h1>
+<p>Redis&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x662F;<code>redis-cli</code>&#xFF0C;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#xFF0C;&#x6709;&#x65F6;&#x4E5F;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x5B58;&#x6D3B;&#x3002;</p>
+<p>&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token comment" spellcheck="true"># &#x8FDE;&#x63A5;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;</span>
+$ redis-cli
+$ <span class="token comment" spellcheck="true"># &#x8FDE;&#x63A5;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;</span>
+$ redis-cli -h 10.0.0.2 -p 6379
+$ <span class="token comment" spellcheck="true"># &#x5224;&#x65AD;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x5B58;&#x6D3B;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x6D3B;&#x5C06;&#x8FD4;&#x56DE;`PONG`</span>
+$ redis-cli -h 10.0.0.2 -p 6379 <span class="token function">ping</span>
+PONG
+$ <span class="token comment" spellcheck="true"># &#x5224;&#x65AD;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x5B58;&#x6D3B;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x4E0D;&#x5B58;&#x5728;</span>
+$ redis-cli -h 10.0.0.2 -p 6379 <span class="token function">ping</span>
+Could not connect to Redis at 10.0.0.2:6379: Connection refused
+</code></pre>
+<p><code>redis-cli</code>&#x8BE6;&#x7EC6;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ redis-cli --help
+redis-cli 3.0.6
+
+Usage: redis-cli <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> <span class="token punctuation">[</span>cmd <span class="token punctuation">[</span>arg <span class="token punctuation">[</span>arg <span class="token punctuation">..</span>.<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+  -h <span class="token operator">&lt;</span>hostname<span class="token operator">&gt;</span>      Server <span class="token function">hostname</span> <span class="token punctuation">(</span>default: 127.0.0.1<span class="token punctuation">)</span>.
+  -p <span class="token operator">&lt;</span>port<span class="token operator">&gt;</span>          Server port <span class="token punctuation">(</span>default: 6379<span class="token punctuation">)</span>.
+  -s <span class="token operator">&lt;</span>socket<span class="token operator">&gt;</span>        Server socket <span class="token punctuation">(</span>overrides <span class="token function">hostname</span> and port<span class="token punctuation">)</span>.
+  -a <span class="token operator">&lt;</span>password<span class="token operator">&gt;</span>      Password to use when connecting to the server.
+  -r <span class="token operator">&lt;</span>repeat<span class="token operator">&gt;</span>        Execute specified <span class="token function">command</span> N times.
+  -i <span class="token operator">&lt;</span>interval<span class="token operator">&gt;</span>      When -r is used, waits <span class="token operator">&lt;</span>interval<span class="token operator">&gt;</span> seconds per command.
+                     It is possible to specify sub-second <span class="token function">times</span> like -i 0.1.
+  -n <span class="token operator">&lt;</span>db<span class="token operator">&gt;</span>            Database number.
+  -x                 Read last argument from STDIN.
+  -d <span class="token operator">&lt;</span>delimiter<span class="token operator">&gt;</span>     Multi-bulk delimiter <span class="token keyword">in</span> <span class="token keyword">for</span> raw formatting <span class="token punctuation">(</span>default: \n<span class="token punctuation">)</span>.
+  -c                 Enable cluster mode <span class="token punctuation">(</span>follow -ASK and -MOVED redirections<span class="token punctuation">)</span>.
+  --raw              Use raw formatting <span class="token keyword">for</span> replies <span class="token punctuation">(</span>default when STDOUT is
+                     not a tty<span class="token punctuation">)</span>.
+  --no-raw           Force formatted output even when STDOUT is not a tty.
+  --csv              Output <span class="token keyword">in</span> CSV format.
+  --stat             Print rolling stats about server: mem, clients, <span class="token punctuation">..</span>.
+  --latency          Enter a special mode continuously sampling latency.
+  --latency-history  Like --latency but tracking latency changes over time.
+                     Default <span class="token function">time</span> interval is 15 sec. Change it using -i.
+  --latency-dist     Shows latency as a spectrum, requires xterm 256 colors.
+                     Default <span class="token function">time</span> interval is 1 sec. Change it using -i.
+  --lru-test <span class="token operator">&lt;</span>keys<span class="token operator">&gt;</span>  Simulate a cache workload with an 80-20 distribution.
+  --slave            Simulate a slave showing commands received from the master.
+  --rdb <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>   Transfer an RDB dump from remote server to local file.
+  --pipe             Transfer raw Redis protocol from stdin to server.
+  --pipe-timeout <span class="token operator">&lt;</span>n<span class="token operator">&gt;</span> In --pipe mode, abort with error <span class="token keyword">if</span> after sending all data.
+                     no reply is received within <span class="token operator">&lt;</span>n<span class="token operator">&gt;</span> seconds.
+                     Default timeout: 30. Use 0 to <span class="token function">wait</span> forever.
+  --bigkeys          Sample Redis keys looking <span class="token keyword">for</span> big keys.
+  --scan             List all keys using the SCAN command.
+  --pattern <span class="token operator">&lt;</span>pat<span class="token operator">&gt;</span>    Useful with --scan to specify a SCAN pattern.
+  --intrinsic-latency <span class="token operator">&lt;</span>sec<span class="token operator">&gt;</span> Run a <span class="token function">test</span> to measure intrinsic system latency.
+                     The <span class="token function">test</span> will run <span class="token keyword">for</span> the specified amount of seconds.
+  --eval <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>      Send an EVAL <span class="token function">command</span> using the Lua script at <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>.
+  --help             Output this <span class="token function">help</span> and exit.
+  --version          Output version and exit.
+
+Examples:
+  <span class="token function">cat</span> /etc/passwd <span class="token operator">|</span> redis-cli -x <span class="token keyword">set</span> mypasswd
+  redis-cli get mypasswd
+  redis-cli -r 100 lpush mylist x
+  redis-cli -r 100 -i 1 info <span class="token operator">|</span> <span class="token function">grep</span> used_memory_human:
+  redis-cli --eval myscript.lua key1 key2 , arg1 arg2 arg3
+  redis-cli --scan --pattern <span class="token string">&apos;*:12345*&apos;</span>
+
+  <span class="token punctuation">(</span>Note: when using --eval the comma separates KEYS<span class="token punctuation">[</span><span class="token punctuation">]</span> from ARGV<span class="token punctuation">[</span><span class="token punctuation">]</span> items<span class="token punctuation">)</span>
+
+When no <span class="token function">command</span> is given, redis-cli starts <span class="token keyword">in</span> interactive mode.
+Type <span class="token string">&quot;help&quot;</span> <span class="token keyword">in</span> interactive mode <span class="token keyword">for</span> information on available commands.
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Redis命令行工具","level":"1.4","depth":1,"next":{"title":"Redis GUI工具","level":"1.5","depth":1,"path":"base/redis-gui.md","ref":"base/redis-gui.md","articles":[]},"previous":{"title":"Redis配置","level":"1.3","depth":1,"path":"base/redis-config.md","ref":"base/redis-config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/redis-cli.md","mtime":"2018-06-21T11:32:38.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:33:58.929Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
