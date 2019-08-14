@@ -456,117 +456,117 @@
 <h2 id="redis-discard&#x547D;&#x4EE4;">Redis Discard&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Discard</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x53D6;&#x6D88;&#x4E8B;&#x52A1;&#xFF0C;&#x653E;&#x5F03;&#x6267;&#x884C;&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x7684;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> DISCARD
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> DISCARD
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> MULTI
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> PING
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> PING
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> SET greeting <span class="token string">&quot;hello&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> SET greeting <span class="token string">&quot;hello&quot;</span>
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> DISCARD
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> DISCARD
 OK
 </code></pre>
 <h2 id="redis-exec&#x547D;&#x4EE4;">Redis Exec&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Exec</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x6240;&#x6709;&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x7684;&#x547D;&#x4EE4;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> EXEC
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6309;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x3002;&#x5F53;&#x64CD;&#x4F5C;&#x88AB;&#x6253;&#x65AD;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x503C;<code>nil</code></p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash"><span class="token comment" spellcheck="true"># &#x4E8B;&#x52A1;&#x88AB;&#x6210;&#x529F;&#x6267;&#x884C;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x4E8B;&#x52A1;&#x88AB;&#x6210;&#x529F;&#x6267;&#x884C;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> MULTI
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR user_id
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR user_id
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR user_id
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> PING
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> PING
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
-1<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-2<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-3<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-4<span class="token punctuation">)</span> PONG
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> EXEC
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">4</span><span class="token punctuation">)</span> PONG
 
-<span class="token comment" spellcheck="true"># &#x76D1;&#x89C6; key &#xFF0C;&#x4E14;&#x4E8B;&#x52A1;&#x6210;&#x529F;&#x6267;&#x884C;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+<span class="token comment"># &#x76D1;&#x89C6; key &#xFF0C;&#x4E14;&#x4E8B;&#x52A1;&#x6210;&#x529F;&#x6267;&#x884C;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> WATCH lock lock_times
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> MULTI
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> SET lock <span class="token string">&quot;huangz&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> SET lock <span class="token string">&quot;huangz&quot;</span>
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR lock_times
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR lock_times
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
-1<span class="token punctuation">)</span> OK
-2<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> EXEC
+<span class="token number">1</span><span class="token punctuation">)</span> OK
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
 
-<span class="token comment" spellcheck="true"># &#x76D1;&#x89C6; key &#xFF0C;&#x4E14;&#x4E8B;&#x52A1;&#x88AB;&#x6253;&#x65AD;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+<span class="token comment"># &#x76D1;&#x89C6; key &#xFF0C;&#x4E14;&#x4E8B;&#x52A1;&#x88AB;&#x6253;&#x65AD;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> WATCH lock lock_times
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> MULTI
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> SET lock <span class="token string">&quot;joe&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> SET lock <span class="token string">&quot;joe&quot;</span>
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR lock_times
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR lock_times
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> EXEC
 <span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="redis-multi&#x547D;&#x4EE4;">Redis Multi&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Multi</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x5757;&#x7684;&#x5F00;&#x59CB;&#x3002;</p>
 <p>&#x4E8B;&#x52A1;&#x5757;&#x5185;&#x7684;&#x591A;&#x6761;&#x547D;&#x4EE4;&#x4F1A;&#x6309;&#x7167;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x88AB;&#x653E;&#x8FDB;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5F53;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x7531;<code>EXEC</code>&#x547D;&#x4EE4;&#x539F;&#x5B50;&#x6027;(atomic)&#x5730;&#x6267;&#x884C;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> MULTI
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> MULTI
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> MULTI
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR user_id
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR user_id
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> INCR user_id
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> INCR user_id
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> PING
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> PING
 QUEUED
-127.0.0.1:6379<span class="token operator">&gt;</span> EXEC
-1<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-2<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-3<span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-4<span class="token punctuation">)</span> PONG
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> EXEC
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">4</span><span class="token punctuation">)</span> PONG
 </code></pre>
 <h2 id="redis-unwatch&#x547D;&#x4EE4;">Redis Unwatch&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Unwatch</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x53D6;&#x6D88;<code>WATCH</code>&#x547D;&#x4EE4;&#x5BF9;&#x6240;&#x6709;key&#x7684;&#x76D1;&#x89C6;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> UNWATCH
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> UNWATCH
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> WATCH lock lock_times
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> UNWATCH
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> UNWATCH
 OK
 </code></pre>
 <h2 id="redis-watch&#x547D;&#x4EE4;">Redis Watch&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Watch</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x4E00;&#x4E2A;(&#x6216;&#x591A;&#x4E2A;)key&#xFF0C;&#x5982;&#x679C;&#x5728;&#x4E8B;&#x52A1;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x8FD9;&#x4E2A;(&#x6216;&#x8FD9;&#x4E9B;)key&#x88AB;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x6240;&#x6539;&#x52A8;&#xFF0C;&#x90A3;&#x4E48;&#x4E8B;&#x52A1;&#x5C06;&#x88AB;&#x6253;&#x65AD;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> WATCH key <span class="token punctuation">[</span>key <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> WATCH key <span class="token punctuation">[</span>key <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x603B;&#x662F;&#x8FD4;&#x56DE;<code>OK</code></p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> WATCH lock lock_times
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> WATCH lock lock_times
 OK
 </code></pre>
 
@@ -606,9 +606,13 @@ OK
     <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
     
 
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Redis事务命令","level":"2.8","depth":1,"next":{"title":"Redis连接命令","level":"2.9","depth":1,"path":"command/redis-connection.md","ref":"command/redis-connection.md","articles":[]},"previous":{"title":"Redis发布订阅命令","level":"2.7","depth":1,"path":"command/redis-pub-sub.md","ref":"command/redis-pub-sub.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"command/redis-transaction.md","mtime":"2018-06-21T11:32:38.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:33:58.929Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"Redis事务命令","level":"2.8","depth":1,"next":{"title":"Redis连接命令","level":"2.9","depth":1,"path":"command/redis-connection.md","ref":"command/redis-connection.md","articles":[]},"previous":{"title":"Redis发布订阅命令","level":"2.7","depth":1,"path":"command/redis-pub-sub.md","ref":"command/redis-pub-sub.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-131598830-2"},"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"command/redis-transaction.md","mtime":"2019-08-14T09:19:32.349Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T09:20:44.646Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 

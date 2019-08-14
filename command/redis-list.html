@@ -446,7 +446,7 @@
 <h2 id="redis-blpop&#x547D;&#x4EE4;">Redis Blpop&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Blpop</code>&#x547D;&#x4EE4;&#x79FB;&#x51FA;&#x5E76;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> BLPOP LIST1 LIST2 <span class="token punctuation">..</span> LISTN TIMEOUT
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> BLPOP LIST1 LIST2 <span class="token punctuation">..</span> LISTN TIMEOUT
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -454,14 +454,14 @@
 <li>&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x88AB;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x6240;&#x5C5E;&#x7684;key&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x88AB;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x7684;&#x503C;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> BLPOP list1 100
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> BLPOP list1 <span class="token number">100</span>
 <span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
-<span class="token punctuation">(</span>100.05s<span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">100</span>.05s<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="redis-brpop&#x547D;&#x4EE4;">Redis Brpop&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Brpop</code>&#x547D;&#x4EE4;&#x79FB;&#x51FA;&#x5E76;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> BRPOP LIST1 LIST2 <span class="token punctuation">..</span> LISTN TIMEOUT
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> BRPOP LIST1 LIST2 <span class="token punctuation">..</span> LISTN TIMEOUT
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -469,14 +469,14 @@
 <li>&#x53CD;&#x4E4B;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x88AB;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x6240;&#x5C5E;&#x7684;key&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x88AB;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x7684;&#x503C;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> BRPOP list1 100
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> BRPOP list1 <span class="token number">100</span>
 <span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
-<span class="token punctuation">(</span>100.06s<span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">100</span>.06s<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="redis-brpoplpush&#x547D;&#x4EE4;">Redis Brpoplpush&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Brpoplpush</code>&#x547D;&#x4EE4;&#x4ECE;&#x5217;&#x8868;&#x4E2D;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x5C06;&#x5F39;&#x51FA;&#x7684;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#xFF1B;&#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> BRPOPLPUSH LIST1 ANOTHER_LIST TIMEOUT
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> BRPOPLPUSH LIST1 ANOTHER_LIST TIMEOUT
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -484,14 +484,14 @@
 <li>&#x53CD;&#x4E4B;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x88AB;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x7684;&#x503C;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x7B49;&#x5F85;&#x65F6;&#x957F;</li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> BRPOPLPUSH msg reciver 500
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> BRPOPLPUSH msg reciver <span class="token number">500</span>
 <span class="token string">&quot;hello world&quot;</span>
-<span class="token punctuation">(</span>3.38s<span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token number">3</span>.38s<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="redis-lindex&#x547D;&#x4EE4;">Redis Lindex&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lindex</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8D1F;&#x6570;&#x4E0B;&#x6807;&#xFF0C;&#x4EE5;<code>-1</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>-2</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LINDEX KEY_NAME INDEX_POSITION
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LINDEX KEY_NAME INDEX_POSITION
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -499,21 +499,21 @@
 <li>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x503C;&#x4E0D;&#x5728;&#x5217;&#x8868;&#x7684;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x8FD4;&#x56DE;<code>nil</code></li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH mylist <span class="token string">&quot;World&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH mylist <span class="token string">&quot;Hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> LINDEX mylist 0
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSH mylist <span class="token string">&quot;World&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSH mylist <span class="token string">&quot;Hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LINDEX mylist <span class="token number">0</span>
 <span class="token string">&quot;Hello&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LINDEX mylist -1
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LINDEX mylist -1
 <span class="token string">&quot;World&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LINDEX mylist 3
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LINDEX mylist <span class="token number">3</span>
 <span class="token punctuation">(</span>nil<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="redis-linsert&#x547D;&#x4EE4;">Redis Linsert&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Linsert</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5728;&#x5217;&#x8868;&#x7684;&#x5143;&#x7D20;&#x524D;&#x6216;&#x8005;&#x540E;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x3002;&#x5F53;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x4E0D;&#x5B58;&#x5728;&#x4E8E;&#x5217;&#x8868;&#x4E2D;&#x65F6;&#xFF0C;&#x4E0D;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;&#x5F53;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x88AB;&#x89C6;&#x4E3A;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x4E0D;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#x679C;key&#x4E0D;&#x662F;&#x5217;&#x8868;&#x7C7B;&#x578B;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LINSERT KEY_NAME BEFORE EXISTING_VALUE NEW_VALUE
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LINSERT KEY_NAME BEFORE EXISTING_VALUE NEW_VALUE
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -522,34 +522,34 @@
 <li>&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x4E3A;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;<code>0</code></li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;World&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> LINSERT mylist BEFORE <span class="token string">&quot;World&quot;</span> <span class="token string">&quot;There&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;Hello&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;There&quot;</span>
-3<span class="token punctuation">)</span> <span class="token string">&quot;World&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;World&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LINSERT mylist BEFORE <span class="token string">&quot;World&quot;</span> <span class="token string">&quot;There&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;Hello&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;There&quot;</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">&quot;World&quot;</span>
 </code></pre>
 <h2 id="redis-llen&#x547D;&#x4EE4;">Redis Llen&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Llen</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x5217;&#x8868;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;key&#x88AB;&#x89E3;&#x91CA;&#x4E3A;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;<code>0</code>&#x3002;&#x5982;&#x679C;key&#x4E0D;&#x662F;&#x5217;&#x8868;&#x7C7B;&#x578B;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LLEN KEY_NAME
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LLEN KEY_NAME
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH list1 <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH list1 <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> LLEN list1
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH list1 <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH list1 <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LLEN list1
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
 </code></pre>
 <h2 id="redis-lpop&#x547D;&#x4EE4;">Redis Lpop&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lpop</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x79FB;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LPOP KEY_NAME
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPOP KEY_NAME
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -557,72 +557,72 @@
 <li>&#x5F53;&#x5217;&#x8868;key&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>nil</code></li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH list1 <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH list1 <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> LPOP list1
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH list1 <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH list1 <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPOP list1
 <span class="token string">&quot;foo&quot;</span>
 </code></pre>
 <h2 id="redis-lpush&#x547D;&#x4EE4;">Redis Lpush&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lpush</code>&#x547D;&#x4EE4;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x503C;&#x63D2;&#x5165;&#x5230;&#x5217;&#x8868;&#x5934;&#x90E8;&#x3002;&#x5982;&#x679C;key&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#x4F1A;&#x88AB;&#x521B;&#x5EFA;&#x5E76;&#x6267;&#x884C;<code>LPUSH</code>&#x64CD;&#x4F5C;&#x3002;&#x5F53;key&#x5B58;&#x5728;&#x4F46;&#x4E0D;&#x662F;&#x5217;&#x8868;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH KEY_NAME VALUE1<span class="token punctuation">..</span> VALUEN
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSH KEY_NAME VALUE1<span class="token punctuation">..</span> VALUEN
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x6267;&#x884C;<code>LPUSH</code>&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH list1 <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH list1 <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE list1 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSH list1 <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSH list1 <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE list1 <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
 </code></pre>
 <h2 id="redis-lpushx&#x547D;&#x4EE4;">Redis Lpushx&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lpushx</code>&#x5C06;&#x4E00;&#x4E2A;&#x503C;&#x63D2;&#x5165;&#x5230;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5217;&#x8868;&#x5934;&#x90E8;&#xFF0C;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x64CD;&#x4F5C;&#x65E0;&#x6548;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LPUSHX KEY_NAME VALUE1<span class="token punctuation">..</span> VALUEN
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSHX KEY_NAME VALUE1<span class="token punctuation">..</span> VALUEN
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p><code>LPUSHX</code>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E4B;&#x540E;&#xFF0C;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LPUSH list1 <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> LPUSHX list1 <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> LPUSHX list2 <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE list1 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSH list1 <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSHX list1 <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LPUSHX list2 <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">0</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE list1 <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
 </code></pre>
 <h2 id="redis-lrange&#x547D;&#x4EE4;">Redis Lrange&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lrange</code>&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x4E2D;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x533A;&#x95F4;&#x4EE5;&#x504F;&#x79FB;&#x91CF;<code>START</code>&#x548C;<code>END</code>&#x6307;&#x5B9A;&#x3002;</p>
 <p>&#x5176;&#x4E2D;<code>0</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>1</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8D1F;&#x6570;&#x4E0B;&#x6807;&#xFF0C;&#x4EE5;<code>-1</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>-2</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE KEY_NAME START END
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE KEY_NAME START END
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x5143;&#x7D20;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;two&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;three&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 0
-1<span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist -3 2
-1<span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;two&quot;</span>
-3<span class="token punctuation">)</span> <span class="token string">&quot;three&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist -100 100
-1<span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;two&quot;</span>
-3<span class="token punctuation">)</span> <span class="token string">&quot;three&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 5 10
-<span class="token punctuation">(</span>empty list or set<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;two&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;three&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> <span class="token number">0</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist -3 <span class="token number">2</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;two&quot;</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">&quot;three&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist -100 <span class="token number">100</span>
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;two&quot;</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">&quot;three&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">5</span> <span class="token number">10</span>
+<span class="token punctuation">(</span>empty list or <span class="token builtin class-name">set</span><span class="token punctuation">)</span>
 </code></pre>
 <h2 id="redis-lrem&#x547D;&#x4EE4;">Redis Lrem&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lrem</code>&#x6839;&#x636E;&#x53C2;&#x6570;<code>COUNT</code>&#x7684;&#x503C;&#xFF0C;&#x79FB;&#x9664;&#x5217;&#x8868;&#x4E2D;&#x4E0E;&#x53C2;&#x6570;<code>VALUE</code>&#x76F8;&#x7B49;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
@@ -633,7 +633,7 @@
 <li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">count = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mord mathit">o</span><span class="mord mathit">u</span><span class="mord mathit">n</span><span class="mord mathit">t</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span>: &#x79FB;&#x9664;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x4E0E;<code>VALUE</code>&#x76F8;&#x7B49;&#x7684;&#x503C;&#x3002;</li>
 </ul>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LREM KEY_NAME COUNT VALUE
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LREM KEY_NAME COUNT VALUE
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -641,71 +641,71 @@
 <li>&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x8FD4;&#x56DE;<code>0</code></li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 4
-127.0.0.1:6379<span class="token operator">&gt;</span> LREM mylist -2 <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">4</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LREM mylist -2 <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
 </code></pre>
 <h2 id="redis-lset&#x547D;&#x4EE4;">Redis Lset&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Lset</code>&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x6765;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;</p>
 <p>&#x5F53;&#x7D22;&#x5F15;&#x53C2;&#x6570;&#x8D85;&#x51FA;&#x8303;&#x56F4;&#xFF0C;&#x6216;&#x5BF9;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#x8FDB;&#x884C; <code>LSET</code>&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
 <p>&#x5173;&#x4E8E;&#x5217;&#x8868;&#x4E0B;&#x6807;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;<code>LINDEX</code>&#x547D;&#x4EE4;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LSET KEY_NAME INDEX VALUE
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LSET KEY_NAME INDEX VALUE
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x8FD4;&#x56DE;<code>ok</code>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 4
-127.0.0.1:6379<span class="token operator">&gt;</span> LSET mylist 0 <span class="token string">&quot;bar&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">4</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LSET mylist <span class="token number">0</span> <span class="token string">&quot;bar&quot;</span>
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1: <span class="token string">&quot;bar&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
-3<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
-4<span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span>: <span class="token string">&quot;bar&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<span class="token number">4</span><span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
 </code></pre>
 <h2 id="redis-ltrim&#x547D;&#x4EE4;">Redis Ltrim&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Ltrim</code>&#x5BF9;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x8FDB;&#x884C;&#x4FEE;&#x526A;(trim)&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x8BA9;&#x5217;&#x8868;&#x53EA;&#x4FDD;&#x7559;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x5728;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x4E4B;&#x5185;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5C06;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
 <p>&#x4E0B;&#x6807;<code>0</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;<code>1</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8D1F;&#x6570;&#x4E0B;&#x6807;&#xFF0C;&#x4EE5;<code>-1</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>-2</code>&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> LTRIM KEY_NAME START STOP
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LTRIM KEY_NAME START STOP
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>ok</code></p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 4
-127.0.0.1:6379<span class="token operator">&gt;</span> LTRIM mylist 1 -1
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">4</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LTRIM mylist <span class="token number">1</span> -1
 OK
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
-3<span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
 </code></pre>
 <h2 id="redis-rpop&#x547D;&#x4EE4;">Redis Rpop&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Rpop</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x79FB;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPOP KEY_NAME
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPOP KEY_NAME
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <ul>
@@ -713,75 +713,75 @@ OK
 <li>&#x5F53;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;<code>nil</code></li>
 </ul>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;one&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;two&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;three&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> RPOP mylist
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;one&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;two&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;three&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPOP mylist
 <span class="token string">&quot;three&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;two&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;one&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;two&quot;</span>
 </code></pre>
 <h2 id="redis-rpoplpush&#x547D;&#x4EE4;">Redis Rpoplpush&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Rpoplpush</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x79FB;&#x9664;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x5C06;&#x8BE5;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5E76;&#x8FD4;&#x56DE;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPOPLPUSH SOURCE_KEY_NAME DESTINATION_KEY_NAME
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPOPLPUSH SOURCE_KEY_NAME DESTINATION_KEY_NAME
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x88AB;&#x5F39;&#x51FA;&#x7684;&#x5143;&#x7D20;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> RPOPLPUSH mylist myotherlist
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPOPLPUSH mylist myotherlist
 <span class="token string">&quot;bar&quot;</span>
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
 </code></pre>
 <h2 id="redis-rpush&#x547D;&#x4EE4;">Redis Rpush&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Rpush</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x503C;&#x63D2;&#x5165;&#x5230;&#x5217;&#x8868;&#x7684;&#x5C3E;&#x90E8;(&#x6700;&#x53F3;&#x8FB9;)&#x3002;</p>
 <p>&#x5982;&#x679C;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#x4F1A;&#x88AB;&#x521B;&#x5EFA;&#x5E76;&#x6267;&#x884C;<code>RPUSH</code>&#x64CD;&#x4F5C;&#x3002;&#x5F53;&#x5217;&#x8868;&#x5B58;&#x5728;&#x4F46;&#x4E0D;&#x662F;&#x5217;&#x8868;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH KEY_NAME VALUE1<span class="token punctuation">..</span>VALUEN
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH KEY_NAME VALUE1<span class="token punctuation">..</span>VALUEN
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x6267;&#x884C;<code>RPUSH</code>&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 3
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
-3<span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">3</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">&quot;bar&quot;</span>
 </code></pre>
 <h2 id="redis-rpushx&#x547D;&#x4EE4;">Redis Rpushx&#x547D;&#x4EE4;</h2>
 <p>Redis <code>Rpushx</code>&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5C06;&#x4E00;&#x4E2A;&#x503C;&#x63D2;&#x5165;&#x5230;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x5217;&#x8868;&#x5C3E;&#x90E8;(&#x6700;&#x53F3;&#x8FB9;)&#x3002;&#x5982;&#x679C;&#x5217;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x64CD;&#x4F5C;&#x65E0;&#x6548;&#x3002;</p>
 <p><strong>&#x8BED;&#x6CD5;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSHX KEY_NAME VALUE1<span class="token punctuation">..</span>VALUEN
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSHX KEY_NAME VALUE1<span class="token punctuation">..</span>VALUEN
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;</strong></p>
 <p>&#x6267;&#x884C;<code>Rpushx</code>&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;</p>
 <p><strong>&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-bash">127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 1
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 2
-127.0.0.1:6379<span class="token operator">&gt;</span> RPUSHX mylist2 <span class="token string">&quot;bar&quot;</span>
-<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> 0
-127.0.0.1:6379<span class="token operator">&gt;</span> LRANGE mylist 0 -1
-1<span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
-2<span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;hello&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">1</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSH mylist <span class="token string">&quot;foo&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">2</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> RPUSHX mylist2 <span class="token string">&quot;bar&quot;</span>
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">0</span>
+<span class="token number">127.0</span>.0.1:637<span class="token operator"><span class="token file-descriptor important">9</span>&gt;</span> LRANGE mylist <span class="token number">0</span> -1
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">&quot;foo&quot;</span>
 </code></pre>
 
                             </div>
@@ -820,9 +820,13 @@ OK
     <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
     
 
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Redis列表命令","level":"2.4","depth":1,"next":{"title":"Redis集合命令","level":"2.5","depth":1,"path":"command/redis-set.md","ref":"command/redis-set.md","articles":[]},"previous":{"title":"Redis哈希命令","level":"2.3","depth":1,"path":"command/redis-hash.md","ref":"command/redis-hash.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"command/redis-list.md","mtime":"2018-06-21T11:32:38.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:33:58.929Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"Redis列表命令","level":"2.4","depth":1,"next":{"title":"Redis集合命令","level":"2.5","depth":1,"path":"command/redis-set.md","ref":"command/redis-set.md","articles":[]},"previous":{"title":"Redis哈希命令","level":"2.3","depth":1,"path":"command/redis-hash.md","ref":"command/redis-hash.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ga":{"configuration":"auto","token":"UA-131598830-2"},"advanced-emoji":{"embedEmojis":false},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc/redis-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Redis Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"command/redis-list.md","mtime":"2019-08-14T09:19:32.349Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T09:20:44.646Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 
